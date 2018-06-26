@@ -1,0 +1,190 @@
+<ion-view view-title="Challenges">
+    <ion-content>
+        <!-- <h1 ng-click="challenges()">Challenges</h1> -->
+        <!-- <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="$ctrl.query">
+            </label>
+        </div>
+
+        <div class="list card" ng-repeat="ch in $ctrl.challenges_List | filter:$ctrl.query">
+            <div class="item item-avatar" style="display:none">
+                <img src="/img/mcfly.jpg">
+                <h2>Marty McFly</h2>
+                <p>November 05, 1955</p>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" src="/img/delorean.jpg">
+                <p>{{ch.snippet}}</p>
+                <p>
+                    <a href="#" class="subdued">
+                        <i class="icon ion-egg"></i>
+                        <span>{{ch.diff_level}}</span>
+                    </a>
+                    <a href="#" class="subdued">
+                        <i class="icon ion-flame"></i>
+                        <span>{{ch.calories}}</span>
+                    </a>
+                    <a href="#" class="subdued">
+                        <i class="icon ion-cube"></i>
+                        <span>{{ch.points}}</span>
+                    </a>
+                </p>
+            </div>
+        </div> -->
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-keyup="keyPressed()" ng-model="searchData.searchQuery">
+            </label>
+        </div>
+        <ion-segment ng-model="categories" full="true" assertive style="padding-left:10px;padding-right:10px;">
+            <ion-segment-button value="all" style="max-height: 50px;padding:10px !important;max-width: 40px;" ng-click="getDifficulties(0)">
+                <i class="icon ion-refresh"></i>
+            </ion-segment-button>
+            <ion-segment-button value="beginner" style="max-height: 50px;padding:10px !important;" ng-click="getDifficulties(1)">
+                Beginner
+            </ion-segment-button>
+            <ion-segment-button value="intermediate" style="max-height: 50px;padding:10px !important;" ng-click="getDifficulties(2)">
+                Intermediate
+            </ion-segment-button>
+            <ion-segment-button value="advanced" style="max-height: 50px;padding:10px !important;" ng-click="getDifficulties(3)">
+                Advanced
+            </ion-segment-button>
+        </ion-segment>
+
+        <div ng-switch="categories">
+            <ion-list ng-switch-when="all">
+                <div class="list card" ng-repeat="ch in challengesList">
+                    <div class="item item-body">
+                        <img class="full-image" src="{{ch.imagePath}}">
+                        <h2>{{ch.title}}</h2>
+                        <p>
+                            <a href="#" class="subdued" style="color:#ffc900;">
+                                <i class="icon ion-egg"></i>
+                                <span>{{ch.desc_level}}</span>
+                            </a>
+                            <a href="#" class="subdued" style="color:#28a54c;">
+                                <i class="icon ion-flame"></i>
+                                <span>{{ch.desc_cal}}</span>
+                            </a>
+                            <a href="#" class="subdued" style="color:#4F8EF7;">
+                                <i class="icon ion-cube"></i>
+                                <span>{{ch.desc_points}}</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </ion-list>
+
+            <ion-list ng-switch-when="beginner">
+                <div class="list card" ng-repeat="ch in challengesList">
+                    <div class="item item-body">
+                        <img class="full-image" src="{{ch.imagePath}}">
+                        <h2>{{ch.title}}</h2>
+                        <p>
+                            <a href="#" class="subdued" style="color:#ffc900;">
+                                <i class="icon ion-egg"></i>
+                                <span>{{ch.desc_level}}</span>
+                            </a>
+                            <a href="#" class="subdued" style="color:#28a54c;">
+                                <i class="icon ion-flame"></i>
+                                <span>{{ch.desc_cal}}</span>
+                            </a>
+                            <a href="#" class="subdued" style="color:#4F8EF7;">
+                                <i class="icon ion-cube"></i>
+                                <span>{{ch.desc_points}}</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </ion-list>
+
+            <ion-list ng-switch-when="intermediate">
+                <div class="list card" ng-repeat="ch in challengesList">
+                    <div class="item item-body">
+                        <img class="full-image" src="{{ch.imagePath}}">
+                        <h2>{{ch.title}}</h2>
+                        <p>
+                            <a href="#" class="subdued" style="color:#ffc900;">
+                                <i class="icon ion-egg"></i>
+                                <span>{{ch.desc_level}}</span>
+                            </a>
+                            <a href="#" class="subdued" style="color:#28a54c;">
+                                <i class="icon ion-flame"></i>
+                                <span>{{ch.desc_cal}}</span>
+                            </a>
+                            <a href="#" class="subdued" style="color:#4F8EF7;">
+                                <i class="icon ion-cube"></i>
+                                <span>{{ch.desc_points}}</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </ion-list>
+
+            <ion-list ng-switch-when="advanced">
+                <div class="list card" ng-repeat="ch in challengesList">
+                    <div class="item item-body">
+                        <img class="full-image" src="{{ch.imagePath}}">
+                        <h2>{{ch.title}}</h2>
+                        <p>
+                            <a href="#" class="subdued" style="color:#ffc900;">
+                                <i class="icon ion-egg"></i>
+                                <span>{{ch.desc_level}}</span>
+                            </a>
+                            <a href="#" class="subdued" style="color:#28a54c;">
+                                <i class="icon ion-flame"></i>
+                                <span>{{ch.desc_cal}}</span>
+                            </a>
+                            <a href="#" class="subdued" style="color:#4F8EF7;">
+                                <i class="icon ion-cube"></i>
+                                <span>{{ch.desc_points}}</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </ion-list>
+
+        </div>
+    </ion-content>
+    <!-- <div>
+        <ion-tabs class="tabs-icon-top tabs-positive">
+            <ion-tab title="Dashboard" icon="ion-home" href="#/app/dashboard">
+                <ion-nav-view name="dashboard-tab"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="Timeline" icon="ion-navicon-round" href="#/app/timeline">
+                <ion-nav-view name="timeline-tab"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="Nearby" icon="ion-android-locate" href="#/app/timeline">
+                <ion-nav-view name="near-by-tab"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="Challenges" icon="ion-trophy" ui-sref="app.challenges">
+                <ion-nav-view name="challenges-tab"></ion-nav-view>
+            </ion-tab>
+        </ion-tabs>
+    </div> -->
+    <div class="tabs-icon-top tabs-positive">
+        <div class="tabs">
+            <a class="tab-item" href="#/app/dashboard">
+                <i class="icon ion-home"></i>
+                Dashboard
+            </a>
+            <a class="tab-item" href="#/app/timeline">
+                <i class="icon ion-navicon-round"></i>
+                Timeline
+            </a>
+            <a class="tab-item" href="#/app/near-by">
+                <i class="icon ion-android-locate"></i>
+                Nearyby
+            </a>
+            <a class="tab-item active" href="#/app/challenges">
+                <i class="icon ion-trophy"></i>
+                Nearyby
+            </a>
+        </div>
+</ion-view>

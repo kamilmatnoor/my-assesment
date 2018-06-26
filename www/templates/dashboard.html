@@ -1,0 +1,36 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <div style="padding:15px;">
+      <h3>Welcome to The Lifestyle Fitness</h3>
+      <br>
+      <p style="text-align: justify">
+        Lorem Ipsum "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." "There is no
+        one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..." Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Duis vestibulum lectus vitae neque maximus placerat. Proin in quam placerat,
+        sollicitudin urna at, vestibulum nisl. Proin blandit augue et cursus elementum. Praesent efficitur purus ac arcu
+        imperdiet, vitae ullamcorper quam malesuada. Proin eros eros, sollicitudin ut est id, porta tempus nunc. Maecenas
+        maximus ex eget luctus accumsan. Sed purus lectus, accumsan a augue in, lacinia eleifend dolor. Praesent eu velit
+        ornare, tristique velit non, ultrices dui. Donec libero nisi, commodo sit amet pellentesque non, vestibulum eu arcu.
+        Mauris iaculis aliquam convallis. Etiam non turpis at eros ultrices maximus. Donec vitae nulla eget tellus dictum
+        suscipit. Sed consectetur consequat diam ut elementum. Sed feugiat at nisi ac luctus.
+      </p>
+    </div>
+  </ion-content>
+  <ion-tabs class="tabs-icon-top tabs-positive">
+    <ion-tab title="Dashboard" icon="ion-home" href="#/app/dashboard">
+      <ion-nav-view name="dashboard-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Timeline" icon="ion-navicon-round" href="#/app/timeline">
+      <ion-nav-view name="timeline-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Nearby" icon="ion-android-locate" href="#/app/timeline">
+      <ion-nav-view name="near-by-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Challenges" icon="ion-trophy" ui-sref="app.challenges">
+      <ion-nav-view name="challenges-tab"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+</ion-view>
