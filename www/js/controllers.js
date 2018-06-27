@@ -16,63 +16,63 @@ angular.module('starter.controllers', [])
     $scope.challengesList = [{
       title: '500 Calories Run',
       difficulty: 1,
-      imagePath: '/img/card-02.png',
+      imagePath: 'img/card-02.png',
       desc_cal: ' 500 Calories |',
       desc_points: ' 60 Points',
       desc_level: ' Beginner  |'
     }, {
       title: '5 KM Cycling',
       difficulty: 1,
-      imagePath: '/img/cyc.jpg',
+      imagePath: 'img/cyc.jpg',
       desc_cal: ' 700 Calories |',
       desc_points: ' 100 Points',
       desc_level: ' Beginner  |'
     }, {
       title: '2.4 KM Run',
       difficulty: 1,
-      imagePath: '/img/card-01.png',
+      imagePath: 'img/card-01.png',
       desc_cal: ' 650 Calories |',
       desc_points: ' 120 Points',
       desc_level: ' Beginner  |'
     }, {
       title: '1.5 KM Run & 50 Mountain Climbers',
       difficulty: 2,
-      imagePath: '/img/mc.jpg',
+      imagePath: 'img/mc.jpg',
       desc_cal: ' 1450 Calories |',
       desc_points: ' 160 Points',
       desc_level: ' Intermediate  |'
     }, {
       title: '50 Mountain Climbers & 40 Burpees',
       difficulty: 2,
-      imagePath: '/img/bp.jpg',
+      imagePath: 'img/bp.jpg',
       desc_cal: ' 1750 Calories |',
       desc_points: ' 140 Points',
       desc_level: ' Intermediate  |'
     }, {
       title: '10 Minutes Stairs Climbing & 40 Burpees',
       difficulty: 2,
-      imagePath: '/img/sr.jpg',
+      imagePath: 'img/sr.jpg',
       desc_cal: ' 1850 Calories |',
       desc_points: ' 170 Points',
       desc_level: ' Intermediate  |'
     }, {
       title: '6.5 KM Run & 50 Jumping Jacks',
       difficulty: 3,
-      imagePath: '/img/jp.jpg',
+      imagePath: 'img/jp.jpg',
       desc_cal: ' 2300 Calories |',
       desc_points: ' 370 Points',
       desc_level: ' Advanced  |'
     }, {
       title: '10 KM Run',
       difficulty: 3,
-      imagePath: '/img/jog.png',
+      imagePath: 'img/jog.png',
       desc_cal: ' 2600 Calories |',
       desc_points: ' 349 Points',
       desc_level: ' Advanced  |'
     }, {
       title: '30 Minutes Butterfly stroke Swimming',
       difficulty: 3,
-      imagePath: '/img/sw.jpg',
+      imagePath: 'img/sw.jpg',
       desc_cal: ' 2850 Calories |',
       desc_points: ' 399 Points',
       desc_level: ' Advanced  |'
@@ -83,13 +83,6 @@ angular.module('starter.controllers', [])
     $scope.searchData = {
       searchQuery: ''
     };
-
-    // Create the login modal that we will use later
-    $ionicModal.fromTemplateUrl('templates/login.html', {
-      scope: $scope
-    }).then(function (modal) {
-      $scope.modal = modal;
-    });
 
     // Triggered in the login modal to close it
     $scope.closeLogin = function () {

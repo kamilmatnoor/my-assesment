@@ -16,21 +16,23 @@
       </p>
     </div>
   </ion-content>
-  <ion-tabs class="tabs-icon-top tabs-positive">
-    <ion-tab title="Dashboard" icon="ion-home" href="#/app/dashboard">
-      <ion-nav-view name="dashboard-tab"></ion-nav-view>
-    </ion-tab>
-
-    <ion-tab title="Timeline" icon="ion-navicon-round" href="#/app/timeline">
-      <ion-nav-view name="timeline-tab"></ion-nav-view>
-    </ion-tab>
-
-    <ion-tab title="Nearby" icon="ion-android-locate" href="#/app/timeline">
-      <ion-nav-view name="near-by-tab"></ion-nav-view>
-    </ion-tab>
-
-    <ion-tab title="Challenges" icon="ion-trophy" ui-sref="app.challenges">
-      <ion-nav-view name="challenges-tab"></ion-nav-view>
-    </ion-tab>
-  </ion-tabs>
+  <div class="tabs-icon-top tabs-positive">
+    <div class="tabs">
+        <a class="tab-item active" href="#/app/dashboard">
+            <i class="icon ion-home"></i>
+            Dashboard
+        </a>
+        <a class="tab-item" href="#/app/timeline">
+            <i class="icon ion-navicon-round"></i>
+            Timeline
+        </a>
+        <a class="tab-item" href="#/app/near-by">
+            <i class="icon ion-android-locate"></i>
+            Nearyby
+        </a>
+        <a class="tab-item" href="#/app/challenges">
+            <i class="icon ion-trophy"></i>
+            Challenges
+        </a>
+    </div>
 </ion-view>

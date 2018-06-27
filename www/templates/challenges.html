@@ -1,38 +1,5 @@
 <ion-view view-title="Challenges">
     <ion-content>
-        <!-- <h1 ng-click="challenges()">Challenges</h1> -->
-        <!-- <div class="list list-inset">
-            <label class="item item-input">
-                <i class="icon ion-search placeholder-icon"></i>
-                <input type="text" placeholder="Search" ng-model="$ctrl.query">
-            </label>
-        </div>
-
-        <div class="list card" ng-repeat="ch in $ctrl.challenges_List | filter:$ctrl.query">
-            <div class="item item-avatar" style="display:none">
-                <img src="/img/mcfly.jpg">
-                <h2>Marty McFly</h2>
-                <p>November 05, 1955</p>
-            </div>
-            <div class="item item-body">
-                <img class="full-image" src="/img/delorean.jpg">
-                <p>{{ch.snippet}}</p>
-                <p>
-                    <a href="#" class="subdued">
-                        <i class="icon ion-egg"></i>
-                        <span>{{ch.diff_level}}</span>
-                    </a>
-                    <a href="#" class="subdued">
-                        <i class="icon ion-flame"></i>
-                        <span>{{ch.calories}}</span>
-                    </a>
-                    <a href="#" class="subdued">
-                        <i class="icon ion-cube"></i>
-                        <span>{{ch.points}}</span>
-                    </a>
-                </p>
-            </div>
-        </div> -->
         <div class="list list-inset">
             <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
@@ -149,25 +116,6 @@
 
         </div>
     </ion-content>
-    <!-- <div>
-        <ion-tabs class="tabs-icon-top tabs-positive">
-            <ion-tab title="Dashboard" icon="ion-home" href="#/app/dashboard">
-                <ion-nav-view name="dashboard-tab"></ion-nav-view>
-            </ion-tab>
-
-            <ion-tab title="Timeline" icon="ion-navicon-round" href="#/app/timeline">
-                <ion-nav-view name="timeline-tab"></ion-nav-view>
-            </ion-tab>
-
-            <ion-tab title="Nearby" icon="ion-android-locate" href="#/app/timeline">
-                <ion-nav-view name="near-by-tab"></ion-nav-view>
-            </ion-tab>
-
-            <ion-tab title="Challenges" icon="ion-trophy" ui-sref="app.challenges">
-                <ion-nav-view name="challenges-tab"></ion-nav-view>
-            </ion-tab>
-        </ion-tabs>
-    </div> -->
     <div class="tabs-icon-top tabs-positive">
         <div class="tabs">
             <a class="tab-item" href="#/app/dashboard">
@@ -184,7 +132,7 @@
             </a>
             <a class="tab-item active" href="#/app/challenges">
                 <i class="icon ion-trophy"></i>
-                Nearyby
+                Challenges
             </a>
         </div>
 </ion-view>
