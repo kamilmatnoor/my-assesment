@@ -84,11 +84,6 @@ angular.module('starter.controllers', [])
       searchQuery: ''
     };
 
-    // Triggered in the login modal to close it
-    $scope.closeLogin = function () {
-      $scope.modal.hide();
-    };
-
     $scope.getDifficulties = function (value) {
       var tempArr = [];
       $scope.searchData = {
